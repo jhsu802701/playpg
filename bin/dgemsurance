@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# Checks for outdated and insecure gems
+echo '----------------------'
+echo 'bundle exec gemsurance'
+docker-compose run --rm web bundle exec gemsurance
+wait
+mv gemsurance_report.html log/gemsurance_report.html
+echo 'The Gemsurance Report is at log/gemsurance_report.html .'
