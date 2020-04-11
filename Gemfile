@@ -9,13 +9,6 @@ ruby '2.6.6'
 
 gem 'rails', '5.2.4.2'
 
-# BEGIN: SQLite
-# NOTE: This section is automatically deleted by the pg_setup.rb script
-group :development, :test do
-  gem 'sqlite3', '1.4.2'
-end
-# END: SQLite
-
 # Use Puma as the app server
 gem 'puma', '3.12.4'
 # Use SCSS for stylesheets
@@ -87,10 +80,7 @@ end
 # END: gems for test_code.sh
 
 # BEGIN: pg section
-# NOTE: This section is automatically updated by the pg_setup.rb script
-group :production do
-  gem 'pg', '1.2.3'
-end
+gem 'pg', '1.2.3'
 # END: pg section
 
 # Minitest

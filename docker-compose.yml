@@ -21,11 +21,11 @@ services:
       - "3000:3000"
     links:
       - mailcatcher
-    #POSTGRES#env_file:
-      #POSTGRES#- .env/development/database
-      #POSTGRES#- .env/development/web
-    #POSTGRES#depends_on:
-      #POSTGRES#- database
+    env_file:
+      - .env/development/database
+      - .env/development/web
+    depends_on:
+      - database
 
   mailcatcher:
     image: yappabe/mailcatcher
@@ -33,16 +33,16 @@ services:
       - "1025:1025"
       - "1080:1080"
 
-  #POSTGRES#database:
-    #POSTGRES#image: postgres
-    #POSTGRES#env_file:
-      #POSTGRES#- .env/development/database
-    #POSTGRES#volumes:
-      #POSTGRES#- db_data:/var/lib/postgresql/data
-      #POSTGRES#- ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    #POSTGRES#ports:
-      #POSTGRES#- "15432:5432"
+  database:
+    image: postgres
+    env_file:
+      - .env/development/database
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "15432:5432"
 
 volumes:
   bundle_path:
-  #POSTGRES#db_data:
+  db_data:
