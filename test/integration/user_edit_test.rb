@@ -41,8 +41,8 @@ class UserEditTest < ActionDispatch::IntegrationTest
 
     # Confirm new email address
     open_email(e)
-    assert current_email.subject.include?('Generic App Template: Confirmation instructions')
-    assert current_email.body.include?('message from Generic App Template')
+    assert current_email.subject.include?('Playing: Confirmation instructions')
+    assert current_email.body.include?('message from Playing')
     current_email.click_link 'Confirm my account'
     assert page.has_text?('Your email address has been successfully confirmed.')
     clear_emails # Clear the message queue

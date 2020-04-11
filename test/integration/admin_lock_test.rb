@@ -108,8 +108,8 @@ class AdminLockTest < ActionDispatch::IntegrationTest
 
     # Follow unlock instructions
     open_email('elle_woods@example.com')
-    assert current_email.subject.include?('Generic App Template: Unlock instructions')
-    assert current_email.body.include?('message from Generic App Template')
+    assert current_email.subject.include?('Playing: Unlock instructions')
+    assert current_email.body.include?('message from Playing')
     assert current_email.body.include?('your ADMIN account')
     current_email.click_link 'Unlock my account'
     assert page.has_text?('Your account has been unlocked successfully.')
@@ -139,8 +139,8 @@ class AdminLockTest < ActionDispatch::IntegrationTest
 
     # Follow unlock instructions
     open_email('paulette_bonafonte@example.com')
-    assert current_email.subject.include?('Generic App Template: Unlock instructions')
-    assert current_email.body.include?('message from Generic App Template')
+    assert current_email.subject.include?('Playing: Unlock instructions')
+    assert current_email.body.include?('message from Playing')
     assert current_email.body.include?('your ADMIN account')
     current_email.click_link 'Unlock my account'
     assert page.has_text?('Your account has been unlocked successfully.')

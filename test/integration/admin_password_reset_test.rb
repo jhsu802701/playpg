@@ -8,8 +8,8 @@ class AdminPasswordResetTest < ActionDispatch::IntegrationTest
 
     # Open and follow instructions
     open_email(email1)
-    assert current_email.subject.include?('Generic App Template: Reset password instructions')
-    assert current_email.body.include?('message from Generic App Template')
+    assert current_email.subject.include?('Playing: Reset password instructions')
+    assert current_email.body.include?('message from Playing')
     assert current_email.body.include?('your ADMIN account')
     current_email.click_link 'Change my password'
     clear_emails # Clear the message queue

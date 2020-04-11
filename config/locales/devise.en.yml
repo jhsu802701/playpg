@@ -18,15 +18,15 @@ en:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
-        subject: "Generic App Template: Confirmation instructions"
+        subject: "Playing: Confirmation instructions"
       reset_password_instructions:
-        subject: "Generic App Template: Reset password instructions"
+        subject: "Playing: Reset password instructions"
       unlock_instructions:
-        subject: "Generic App Template: Unlock instructions"
+        subject: "Playing: Unlock instructions"
       email_changed:
-        subject: "Generic App Template: Email Changed"
+        subject: "Playing: Email Changed"
       password_change:
-        subject: "Generic App Template: Password Changed"
+        subject: "Playing: Password Changed"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."

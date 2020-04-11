@@ -35,8 +35,8 @@ class AdminResendConfTest < ActionDispatch::IntegrationTest
 
     # Open and follow instructions
     open_email(e)
-    assert current_email.subject.include?('Generic App Template: Confirmation instructions')
-    assert current_email.body.include?('message from Generic App Template')
+    assert current_email.subject.include?('Playing: Confirmation instructions')
+    assert current_email.body.include?('message from Playing')
     assert current_email.body.include?('your ADMIN account')
     current_email.click_link 'Confirm my account'
     clear_emails # Clear the message queue

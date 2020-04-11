@@ -1,10 +1,9 @@
 <!--- BEGIN: badges --->
-[![Build Status](https://travis-ci.com/rubyonracetracks/railn-20200408-181926-306.svg?branch=master)](https://travis-ci.com/rubyonracetracks/railn-20200408-181926-306)
 <!--- END: badges --->
 
-# Generic App Template
+# Playing
 
-Welcome to Generic App Template!
+Welcome to Playing!
 
 ## How was this app created?
 This Rails app was created with 
